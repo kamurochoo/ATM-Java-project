@@ -1,0 +1,236 @@
+package javaapplication4;
+
+import javax.swing.*;
+import java.awt.*;
+import java.util.*;
+import com.toedter.calendar.JDateChooser;
+import java.awt.event.*;
+public class SignupOne extends JFrame implements ActionListener{
+    
+    long random;
+    JTextField name1,name2,name3,name4,name5,name6,name7;
+    JRadioButton aaa,aa,a,aaaa;
+    JButton exit;
+     JDateChooser data;
+    
+    SignupOne(){
+        
+        setLayout(null); 
+        
+        Random ran = new Random();
+         random =Math.abs((ran.nextLong() % 9000L)+1000L);
+        
+        
+        
+        JLabel formno = new JLabel("APPLICATION NO. "+ random);
+                formno.setFont(new Font("Garamond", Font.ITALIC, 40));
+                formno.setForeground(Color.white);                   
+                formno.setBounds(190, 18,500, 50);
+                add(formno);
+                
+                
+                JLabel personald = new JLabel("PAGE NO.1(PERSONAL DETAILS)");
+                personald.setFont(new Font("Garamond", Font.BOLD, 25));
+                personald.setForeground(Color.white);                   
+                personald.setBounds(220, 70,500, 50);
+                add(personald);
+                
+                
+                 
+                JLabel name = new JLabel("FULL NAME :");
+                name.setFont(new Font("Garamond", Font.BOLD, 20));
+                name.setForeground(Color.white);                   
+                name.setBounds(50, 140,500, 50);
+                add(name);
+                
+                 name1= new JTextField();
+                name1.setBounds(250, 150, 400, 20);
+                name1.setFont(new Font("Arial",Font.ITALIC,20));
+                add(name1);
+                
+                JLabel papa = new JLabel("FATHER'S NAME :");
+                papa.setFont(new Font("Garamond", Font.BOLD, 20));
+                papa.setForeground(Color.white);                   
+                papa.setBounds(50, 190,500, 50);
+                add(papa);
+                
+                 name2= new JTextField();
+                name2.setBounds(250, 203, 400, 20);
+                name2.setFont(new Font("Arial",Font.ITALIC,20));
+                add(name2);
+                
+                JLabel dob = new JLabel("DATE OF BIRTH :");
+                dob.setFont(new Font("Garamond", Font.BOLD, 20));
+                dob.setForeground(Color.white);                   
+                dob.setBounds(50, 240,500, 50);
+                add(dob);
+                
+                data = new JDateChooser();
+                data.setBounds(250, 253, 200, 20);
+                add(data);
+                
+                JLabel gender= new JLabel("GENDER :");
+                gender.setFont(new Font("Garamond", Font.BOLD, 20));
+                gender.setForeground(Color.white);                   
+                gender.setBounds(50, 290,800, 50);
+                add(gender);
+                
+                
+                 aaa=new JRadioButton("MALE");
+                aaa.setBounds(250, 303, 60, 20);
+                add(aaa);
+                
+                 aa=new JRadioButton("FEMALE");
+                aa.setBounds(400, 303, 80, 20);
+                add(aa);
+                
+                ButtonGroup bb=new ButtonGroup();
+                bb.add(aa);
+                bb.add(aaa);
+                
+                JLabel email= new JLabel("EMAIL ADDRESS :");
+                email.setFont(new Font("Garamond", Font.BOLD, 20));
+                email.setForeground(Color.white);                   
+                email.setBounds(50, 340,500, 50);
+                add(email);
+                
+                 name3= new JTextField();
+                name3.setBounds(250, 353, 400, 20);
+                name3.setFont(new Font("Arial",Font.ITALIC,20));
+                add(name3);
+                
+                JLabel martial= new JLabel("MARTIAL STATUS :");
+                martial.setFont(new Font("Garamond", Font.BOLD, 20));
+                martial.setForeground(Color.white);                   
+                martial.setBounds(50, 390,500, 50);
+                add(martial);
+                
+                 
+                 aaaa=new JRadioButton("MARRIED");
+                aaaa.setBounds(250, 403, 100, 20);
+                add(aaaa);
+                
+                  a=new JRadioButton("UNMARRIED");
+                a.setBounds(400, 403, 105, 20);
+                add(a);
+                
+                 ButtonGroup bbb=new ButtonGroup();
+                bbb.add(a);
+                bbb.add(aaaa);
+                
+                JLabel address= new JLabel("ADDRESS :");
+                address.setFont(new Font("Garamond", Font.BOLD, 20));
+                address.setForeground(Color.white);                   
+                address.setBounds(50, 440,500, 50);
+                add(address);
+                
+                name4= new JTextField();
+                name4.setBounds(250, 453, 400, 20);
+                name4.setFont(new Font("Arial",Font.ITALIC,20));
+                add(name4);
+                
+                JLabel city= new JLabel("CITY :");
+                city.setFont(new Font("Garamond", Font.BOLD, 20));
+                city.setForeground(Color.white);                   
+               city.setBounds(50, 490,500, 50);
+                add(city);
+                
+                name5= new JTextField();
+                name5.setBounds(250, 503, 400, 20);
+                name5.setFont(new Font("Arial",Font.ITALIC,20));
+                add(name5);
+                
+                JLabel pin= new JLabel("PIN CODE :");
+                pin.setFont(new Font("Garamond", Font.BOLD, 20));
+                pin.setForeground(Color.white);                   
+                pin.setBounds(50, 540,500, 50);
+                add(pin);
+                
+                 name6= new JTextField();
+                name6.setBounds(250, 553, 400, 20);
+                name6.setFont(new Font("Arial",Font.ITALIC,20));
+                add(name6);
+                
+                JLabel state= new JLabel("STATE :");
+                state.setFont(new Font("Garamond", Font.BOLD, 20));
+                state.setForeground(Color.white);                   
+                state.setBounds(50, 590,500, 50);
+                add(state);
+                
+                name7= new JTextField();
+                name7.setBounds(250, 603, 400, 20);
+                name7.setFont(new Font("Arial",Font.ITALIC,20));
+                add(name7);
+         
+                exit = new JButton("NEXT");
+                exit.setBounds(700,680,100,30);
+                exit.setForeground(Color.black);
+                exit.setBackground(Color.LIGHT_GRAY);
+                exit.setFont(new Font("Raieway",Font.BOLD,20));
+                exit.addActionListener(this);
+                add(exit);
+         
+        setSize(850,800);
+        setVisible(true);
+        setLocation(350,10);
+        
+        
+        getContentPane().setBackground(Color.BLACK);
+    }
+
+     public void actionPerformed(ActionEvent ae){
+          String formno=""+random;
+          String name=name1.getText();
+          String papa=name2.getText();
+          String dob=((JTextField)data.getDateEditor().getUiComponent()).getText();
+          String gender = null;
+          if(aaa.isSelected()){
+              gender = "male";
+          }else if (aa.isSelected()){
+              gender="female";
+          }
+          String email=name3.getText();
+           String address=name4.getText();
+           String martial = null;
+          if(aaaa.isSelected()){
+              gender = "married";
+          }else if (a.isSelected()){
+              gender="unmarried";
+          }
+            String city=name5.getText();
+            String pin=name6.getText();
+            String state=name7.getText();
+          
+          
+          try{
+              if(name.equals("")){
+                  JOptionPane.showMessageDialog(null, "NAME IS REQUIRED");
+              
+          }else if(papa.equals("")){
+                  JOptionPane.showMessageDialog(null, " PAPA KA NAAM KON DEGA");
+                  
+                  
+                  
+                  
+                  
+          }else {
+                  Con c = new Con();
+                  String query="insert into signup1 values('"+formno+"', '"+name+"', '"+papa+"', '"+dob+"', '"+gender+"', '"+email+"','"+martial+"','"+address+"', '"+pin+"', '"+state+"', '"+city+"')";
+                 c.s.executeUpdate(query);
+                 setVisible(false);
+              new Signuptwo(formno).setVisible(true);
+              }
+          
+          
+          }catch(Exception e){
+            System.out.println(e);
+        }
+         
+         
+         
+         
+     }
+    public static void main(String args[]) {
+       new SignupOne();
+    }
+}
